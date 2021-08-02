@@ -1,17 +1,14 @@
-npm version patch
-npm will look at package.json file and increment
+##### **Lazy Scripts**
 
-when we publish we want to update the versioning, see semantic versioning, This is manual
+###### ** Usage: npm run clean **
+delete the build folder
 
-npm build,
+##### ** Usage: npm run build **
+builds the sub project 
 
-then npm publish --access public
+#### ** Usage: npm run pub **
+adds changes, commits those changes, publishes those changes
+after applying a quick version check...
 
-to ease this will be automating just for this project
 
-npm run pub:
-build
-commit
-push
-publish
 
