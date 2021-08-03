@@ -1,3 +1,7 @@
+//Re-export
+//(1) execute npm run pub
+//(2) verify in auth service the version
+//(3) inside ticketing/auth exec: npm update @ticket-share/common
 export * from './errors/bad-request-error';
 export * from './errors/custom-error';
 export * from './errors/database-connection-error';
