@@ -20,7 +20,7 @@ export * from './events/base-publisher';
 export * from './events/subjects';
 export * from './events/ticket-created-event';
 export * from './events/ticket-updated-event';
-
+export * from './events/types/order-status';
 /*
 since we are extracting this from main project, need to
 install the dependencies
