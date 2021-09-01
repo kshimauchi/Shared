@@ -21,14 +21,12 @@ export * from './events/subjects';
 export * from './events/ticket-created-event';
 export * from './events/ticket-updated-event';
 export * from './events/types/order-status';
+
+export * from './events/order-cancelled-event';
+export * from './events/order-created-event';
 /*
 since we are extracting this from main project, need to
 install the dependencies
-
- npm install express express-validator cookie-session jsonwebtoken @types/cookie-session @types/express @types/jsonwebtoken
-
- 
-
-
+npm install express express-validator cookie-session jsonwebtoken @types/cookie-session @types/express @types/jsonwebtoken
 */
 
