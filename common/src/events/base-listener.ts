@@ -18,7 +18,7 @@ interface Event {
 export abstract class Listener<T extends Event> {
     
     abstract subject: T['subject'];
-    abstract queueuGroupName: string;
+    abstract queueGroupName: string;
     
     private client: Stan;
     protected awkWait = 5 * 1000;
@@ -36,20 +36,20 @@ export abstract class Listener<T extends Event> {
             .setDeliverAllAvailable()
             .setManualAckMode(true)
             .setAckWait(this.awkWait)
-            .setDurableName(this.queueuGroupName);
+            .setDurableName(this.queueGroupName);
     }
     
     listen() {
         
         const subscription = this.client.subscribe(
             this.subject,
-            this.queueuGroupName,
+            this.queueGroupName,
             this.subscriptionOptions()
         );
     
         subscription.on('message', (msg: Message) => {
       
-            console.log(`Message Received: ${this.subject} / ${this.queueuGroupName}`);
+            console.log(`Message Received: ${this.subject} / ${this.queueGroupName}`);
       
             const parsedData = this.parseMessage(msg);
       
