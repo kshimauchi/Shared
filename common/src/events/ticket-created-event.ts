@@ -10,5 +10,7 @@ export interface TicketCreatedEvent {
         title: string;
         price: number;
         userId: string;
+        // dont really need an order id here 
+        // they would always be null
     };
 }

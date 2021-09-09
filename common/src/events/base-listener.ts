@@ -20,7 +20,7 @@ export abstract class Listener<T extends Event> {
     abstract subject: T['subject'];
     abstract queueGroupName: string;
     
-    private client: Stan;
+    protected client: Stan;
     protected awkWait = 5 * 1000;
     // defined data in    
     abstract onMessage(data: T['data'], msg: Message): void;
